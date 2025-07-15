@@ -58,6 +58,7 @@
 					useGlobalPkgs = true;
 					# useUserPkgs = true;
 					users.benjaminpasco.imports = [
+						./flakes/berkeley-mono.nix # Will load Patched font files and make them available for my user
 						({pkgs, ...}: {
 							# Specify home-manager configs
 							home.stateVersion = "25.05";
@@ -72,6 +73,12 @@
 								pkgs.helix
 								pkgs.raycast
 								pkgs.aerospace
+								pkgs.zellij
+								pkgs.mpd
+								pkgs.rmpc
+								pkgs.yt-dlp
+								pkgs.yazi
+								pkgs.fontconfig
 							];
 							home.sessionVariables = {
 								# dont know what that is
@@ -79,6 +86,7 @@
 								CLICOLOR = 1;
 								EDITOR = "vim";
 							};
+							# programs.kitty.enable = true;
 							programs.bat.enable = true;
 							programs.bat.config.theme = "TwoDark";
 							programs.fzf.enable = true;
@@ -109,6 +117,20 @@
 								set visible-stats on
 							'';
 							home.file.".aerospace.toml".source = ./config/aerospace.toml;
+							home.file.".config/helix/config.toml".source = ./config/helix.toml;
+							home.file.".config/ghostty/config".source = ./config/ghostty;
+							home.file.".config/zellij/config.kdl".source = ./config/zellij/config.kdl;
+							home.file.".config/mpd/mpd.conf".source = ./config/mpd/mpd.conf;
+							services.mpd = {
+							  enable = true;
+							  musicDirectory = "~/Music";
+							  dataDir = "/Users/benjaminpasco/.local/share/mpd";
+							};
+							home.file.".config/rmpc/config.ron".source = ./config/rmpc/config.ron;
+							home.file.".config/kitty/kitty.conf".source = ./config/kitty/kitty.conf;
+							home.file.".config/kitty/rose-pine.conf".source = ./config/kitty/rose-pine.conf;
+							home.file.".config/yazi/yazi.toml".source = ./config/yazi/yazi.toml;
+							home.file.".config/yazi/theme.toml".source = ./config/yazi/theme.toml;
 						})
 					];
 				};

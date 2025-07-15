@@ -1,14 +1,49 @@
-need to install homebrew:
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# homebrew
+description: well known shit package manager
+We need to install homebrew (for ghostty cause package is brokenn :( )):
+```bash
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
 
 first command to build the nix.flake file with "default" profile:
 nix --extra-experimental-features "nix-command flakes" build .#darwinConfigurations.default.system
 this command should build and create a .result directory symlinked to the /nix/store directory
 
-then run this:
-sudo ./result/sw/bin/darwin-rebuild switch --flake ~/Projects/nix#default
-which should activate our built "default" configuration
+then run this to build the config:
+```bash
+  sudo ./result/sw/bin/darwin-rebuild switch --flake .#default
+```
 
-when done already once, can then use this command to rebuild the config
-sudo darwin-rebuild switch --flake ~/Projects/nix#default
+and then after a first successfull build use:
+```bash
+  sudo darwin-rebuild switch --flake .#default
+```
 
+# rmpc:
+description: terminal audio player usibg mpd daemon, can read music from youtube, open using "rmpc"
+other commands/keymaps:
+q - quit
+
+# Berkeley Mono:
+description: derivation used to take patched Berkeley mono font files and add them to our fonts
+Copy your pre-patched Berkeley Mono Nerd Font files:
+```bash
+  cp /path/to/your/patched/berkeley-mono/*.ttf fonts/berkeley-mono/patched/
+```
+
+Then do a rebuild:
+```bash
+  sudo ./result/sw/bin/darwin-rebuild switch --flake .#default
+  or
+  sudo darwin-rebuild switch --flake .#default
+```
+
+# Keymaps:
+## Kitty:
+new tab: cmd + t
+go to left tab: cmd + shift + h
+go to right tab: cmd + shit + l
+new pane to right: cmd + %
+new pane to bottom: cmd + 3
+move across panes: cmd + h/j/k/l
+resize pane: cmd + r

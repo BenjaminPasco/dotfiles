@@ -1,0 +1,33 @@
+theme = "rose_pine"
+
+[editor]
+scrolloff = 20
+mouse = false
+middle-click-paste = false
+scroll-lines = 0
+line-number = "relative"
+cursorline = true
+cursorcolumn = true
+completion-timeout = 0
+completion-trigger-len = 1
+completion-replace = true
+true-color = true
+# maybe disable if annoying
+bufferline = "always"
+color-modes = true
+popup-border = "all"
+
+[editor.statusline]
+left = ["mode", "spinner", "version-control", "read-only-indicator", "file-modification-indicator"]
+center = ["file-base-name"]
+right = ["diagnostics", "file-type", "selections", "register", "position", "file-encoding", "total-line-numbers"]
+mode.normal = "Normal"
+mode.insert = "Insert"
+mode.select = "Select"
+
+[editor.soft-wrap]
+enable = true
+
+[editor.inline-diagnostics]
+cursor-line = "hint"
+other-lines = "warning"

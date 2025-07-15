@@ -1,0 +1,8 @@
+(
+    address: "/tmp/mpd_socket",
+    cache_dir: Some("/tmp/rmpc/cache"),
+    theme: None,
+    select_current_song_on_change: true,
+    volume_step: 5,
+    seek_step: 5,
+)

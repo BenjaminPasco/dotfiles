@@ -32,3 +32,5 @@ temp/
 # Local development overrides (if you create any)
 local.nix
 secrets.nix
+
+assets/fonts/berkeley-mono
