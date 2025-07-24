@@ -54,26 +54,26 @@ Then do a rebuild:
 ## Aerospace:
 Here we use modes to do stuff
 by default we are in main mode
-go to move mode: shift + option + m
-then 1, 2, 3, ... to move the current node (program window) to workspace 1, 2, 3, ...
-go to go mode: shift + option + g
-then 1, 2, 3, ... to move to workspace 1, 2, 3, ...
-move node accross monitors (cycling if 3 or more): shift + option + tab
-cycling between monitors: option + tab
+- go to move mode: shift + option + m
+- then 1, 2, 3, ... to move the current node (program window) to workspace 1, 2, 3, ...
+- go to go mode: shift + option + g
+- then 1, 2, 3, ... to move to workspace 1, 2, 3, ...
+- move node accross monitors (cycling if 3 or more): shift + option + tab
+- cycling between monitors: option + tab
 
 ## Kitty:
-new tab: cmd + t
-go to left tab: cmd + shift + h
-go to right tab: cmd + shift + l
-new pane to right: cmd + %
-new pane to bottom: cmd + "
-move across panes: cmd + h/j/k/l
-resize pane: cmd + r
+- new tab: cmd + t
+- go to left tab: cmd + shift + h
+- go to right tab: cmd + shift + l
+- new pane to right: cmd + %
+- new pane to bottom: cmd + "
+- move across panes: cmd + h/j/k/l
+- resize pane: cmd + r
 
 ## Raycast:
-open raycast: option + space
+- open raycast: option + space
 
 ## Yazi:
-open file explorer: yazi
-moving around: h/j/k/l
-opening files: o/enter
+- open file explorer: yazi
+- moving around: h/j/k/l
+- opening files: o/enter
