@@ -37,6 +37,7 @@ in
   	pkgs.ripgrep
   	pkgs.raycast
   	pkgs.fontconfig
+    pkgs.whatsapp-for-mac
   ];
 
   home.file.".inputrc".source = ../config/.inputrc;

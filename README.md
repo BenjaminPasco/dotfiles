@@ -1,6 +1,5 @@
 # homebrew
-description: well known shit package manager
-We need to install homebrew (for ghostty cause package is brokenn :( )):
+We need to install homebrew (for ghostty because nix package is broken:
 ```bash
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
